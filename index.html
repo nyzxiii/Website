@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Name | Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #ff3c3c;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff3c3c;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero span {
+            color: #ff3c3c;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff3c3c;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #cc2f2f;
+        }
+
+        section {
+            padding: 60px 50px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            margin-top: 40px;
+        }
+
+        @media(max-width: 768px){
+            header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>YourName</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Hi, I'm <span>YourName</span></h2>
+    <p>Python Developer • Tool Builder • Problem Solver</p>
+    <button class="btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+        View My Work
+    </button>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I build automation tools, desktop applications, and custom utilities using Python.
+        Currently working on screen recording tools and AI-based assistant software.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Shadow Recorder</h3>
+            <p>Rolling 30s screen capture tool with hotkeys and custom FPS.</p>
+        </div>
+        <div class="card">
+            <h3>Discord Music Bot</h3>
+            <p>Slash command bot with queue system and autoplay.</p>
+        </div>
+        <div class="card">
+            <h3>AI Windows Assistant</h3>
+            <p>Voice + text desktop assistant built with PyQt.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your@email.com</p>
+</section>
+
+<footer>
+    © 2026 YourName. All Rights Reserved.
+</footer>
+
+</body>
+</html>
